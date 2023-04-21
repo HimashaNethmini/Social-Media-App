@@ -1,11 +1,16 @@
-import "./home.scss"
+import Stories from "../../component/stories/Stories";
+import Posts from "../../components/posts/Posts";
+import Share from "../../components/share/Share";
+import "./home.scss";
 
-const home = () => {
+const Home = () => {
   return (
-    <div>
-      
+    <div className="home">
+      <Stories/>
+      <Share/>
+      <Posts/>
     </div>
   )
-}
+};
 
-export default home
+export default Home;

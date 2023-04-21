@@ -17,7 +17,7 @@ $themes: (
     border: #444,
   ),
 );
-
+//according to the theme color of fonts and background are changed
 @mixin themify($themes) {
   @each $theme, $map in $themes {
     .theme-#{$theme} & {

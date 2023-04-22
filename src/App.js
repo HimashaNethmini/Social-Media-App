@@ -1,7 +1,5 @@
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import Home from "./pages/home/Home";
-import Profile from "./pages/profile/Profile";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,13 +7,14 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
-
 //importing all components folders
-
 import Navbar from "./component/navbar/Navbar";
 import Leftbar from "./component/leftbar/Leftbar";
 import Rightbar from "./component/rightbar/Rightbar";
-import "./style.scss"
+import Home from "./pages/home/Home";
+import Profile from "./pages/profile/Profile";
+
+import "./style.scss";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/authContext";
 import { useContext } from "react";
@@ -23,6 +22,7 @@ import { useContext } from "react";
 function App() {
 
   //not letting access without login
+
   const {currentUser} = useContext(AuthContext);
 
   const {darkMode} = useContext(DarkModeContext);
@@ -44,7 +44,7 @@ function App() {
 
   const ProtectedRoute = ({children}) => {
     if(!currentUser){
-      return <Navigate to="/login" />
+      return <Navigate to="/login" />;
     }
     return children;
   }
@@ -67,8 +67,8 @@ function App() {
         {
           path:"/profile/:id",
           element:<Profile/>
-        }
-      ]
+        },
+      ],
     },
 
     {

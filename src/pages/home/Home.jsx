@@ -1,6 +1,6 @@
 import Stories from "../../component/stories/Stories";
-import Posts from "../../components/posts/Posts";
-import Share from "../../components/share/Share";
+import Posts from "../../component/posts/Posts";
+import Share from "../../component/share/Share";
 import "./home.scss";
 
 const Home = () => {
